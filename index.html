@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+    <head>
+        <title>Personal Portfolio Website</title>
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="nav-bar">
+                <div class="logo-together">
+                     <div id="foo" class="ball"></div>               
+                     <img src="./images/dodesign-logo.png" alt="logo" />
+                </div>
+
+                <div class="dropdown">
+                    <div class="dropbtn">
+                        <div class="drop-icon">
+                            <div class="drop-line"></div>                          
+                            <div class="drop-line"></div>
+                            <div class="drop-line"></div>
+                        </div>                        
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                      <a href="index.html">Home</a>
+                        <a href="aboutMe.html">About Me</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="skills.html">Skills</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+
+                <nav>
+                     <a href="index.html">Home</a>
+                     <a href="aboutMe.html">About Me</a>
+                     <a href="projects.html">Projects</a>
+                     <a href="skills.html">Skills</a>
+                     <a href="contact.html">Contact</a>
+                </nav> 
+            </div>            
+        
+            <div class="banner">
+                <div class="slide-left">
+                    <h1>Oksana Dargue</h1>        
+                </div>
+                <div class="drop-down">
+                    <h2>Portfolio</h2> 
+                </div>
+            </div>           
+               
+        </header>
+
+        <main>
+
+<section id="cards-home">
+
+<!--My Story -->
+<div class="card" id="story">
+    <div class="card-content">
+        <h3 class="card-title">My Story</h3>
+        <h4 class="card-text">From sales to programming.</h4>
+        <button><a href="aboutMe.html">Explore</a></button>
+    </div>
+</div>
+
+<!--My Work-->
+<div class="card" id="work">
+    <div class="card-content">
+         <h3 class="card-title">My Projects</h3>
+         <h4 class="card-text">Explore my recent work.</h4>
+         <button><a href="projects.html">Explore</a></button>
+    </div>  
+</div>
+
+<!--My Skills-->
+<div class="card" id="skills">
+    <div class="card-content">
+         <h3 class="card-title">My Skills</h3>
+         <h4 class="card-text">In progress.</h4>
+         <button><a href="skills.html">Explore</a></button>
+    </div>
+</div>
+
+<!--Get In Touch-->
+<div class="card" id="contact">
+    <div class="card-content">
+         <h3 class="card-title">Get In Touch</h3>
+         <h4 class="card-text">I'd love to hear from you.</h4>
+         <button><a href="skills.html">Explore</a></button>
+    </div>
+</div>
+
+</section>
+        </main>
+
+    <!--Footer-->
+
+        <footer>
+            <p>Oksana Dargue &COPY;<span>2022</span></p>
+        </footer>
+
+        <script>
+            var f = document.getElementById('foo');
+            document.addEventListener('click', function(ev){
+            f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
+            f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
+            },false);
+        </script>
+
+        <script>
+            const header = document.querySelector('.nav-bar');
+            window.onscroll = function() {
+                var top = window.scrollY;
+                console.log(top);
+                if (top >= 150) {
+                    header.classList.add('active-bar')
+                } else {
+                    header.classList.remove('active-bar');
+                }
+            }
+        </script>
+
+  
+    </body>
+</html>

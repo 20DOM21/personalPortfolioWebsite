@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+      <title>Personal Portfolio Website</title>
+      <link href="style.css" type="text/css" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+    </head>
+
+    <body>
+
+        <header id="header-about-me">
+
+            <div class="nav-bar">
+                <div class="logo-together">
+                     <div id="foo" class="ball"></div>               
+                     <img src="./images/dodesign-logo.png" alt="logo" />
+                </div>
+                <div class="dropdown">
+                    <div class="dropbtn">
+                        <div class="drop-icon">
+                            <div class="drop-line"></div>                          
+                            <div class="drop-line"></div>
+                            <div class="drop-line"></div>
+                        </div>                        
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                      <a href="index.html">Home</a>
+                        <a href="aboutMe.html">About Me</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="skills.html">Skills</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <nav>
+                     <a href="index.html">Home</a>
+                     <a href="aboutMe.html">About Me</a>
+                     <a href="projects.html">Projects</a>
+                     <a href="skills.html">Skills</a>
+                     <a href="contact.html">Contact</a>
+                </nav> 
+            </div>  
+                    
+            <div class="banner" id="banner-aboutMe">
+                <div class="content-aboutMe">
+                     <div class="title-aboutMe">
+                          <h1>My Story</h1>        
+                      </div>
+                     <div class="text-aboutMe">
+                          <h2>From sales to programming</h2> 
+                     </div>
+                </div>
+            </div>             
+               
+        </header>
+
+        <main class="aboutMe">
+
+        <h3>Hi there, </h3>
+
+        <p>My name is Oksana. I live in Greater London - an amazing city of oportunities.
+        As with many, my path into programming has been untraditional.
+        I have graduated with a bachelor's degree in economics and spent most of my carear working in sales.</p>
+        
+        <p>However, I've always been passionate about technology, creation and precision. I've become fascinated by the intricacies of coding.
+        Equipped with a problem-solving attitude, an open mind, and an aptitude for finding good solutions, 
+        I've decided to pursue a career in a web / software development. Currently, I'm on the path to becoming a Full Stack Ingeneer.
+        </p>
+
+        </main>
+
+        <footer>
+            <p>Oksana Dargue &COPY;<span>2022</span></p>
+        </footer>
+
+        <script>
+            var f = document.getElementById('foo');
+            document.addEventListener('click', function(ev){
+            f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
+            f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
+            },false);
+        </script>
+
+        <script>
+            const header = document.querySelector('.nav-bar');
+            window.onscroll = function() {
+            var top = window.scrollY;
+            console.log(top);
+               if (top >= 150) {
+                  header.classList.add('active-bar')
+               } else {
+                  header.classList.remove('active-bar');
+               }
+            }
+        </script>
+
+    </body>
+
+</html>

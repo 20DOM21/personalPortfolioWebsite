@@ -1,0 +1,1732 @@
+/* index.html */
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    margin-top: 0;
+    padding: 0;
+}
+
+#all-the-rest-number4 {
+    display: none;
+}
+
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    color: #aa1111;
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    word-spacing: 2rem;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    color:black;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+}
+
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+header { 
+    position: relative;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("./images/big-ben.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50rem;
+}
+
+header .nav-bar, header .active-bar {
+    position: fixed;
+    max-width: 100%;
+    width: 100%;
+    margin:0;    
+    padding: 0.5rem 0.5rem;
+    flex-flow: row wrap;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    z-index: 4;   
+}
+
+header .nav-bar {
+    height: 2rem;
+    background: transparent;
+    transition: all 0.2s;
+}
+
+header .active-bar {
+    height: 2.5rem;
+    background: white;    
+    border-bottom: 0.2rem solid grey;
+    transition: all 0.3s;
+}
+
+.nav-bar .logo-together, .active-bar .logo-together {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 15rem;
+}
+
+.nav-bar .ball, .active-bar .ball {
+    position: relative;
+    top: 0.5%;
+    left:5%;
+    border-radius: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.3rem solid #aa1111;
+    background: transparent;
+    transition: transform 1s;
+    z-index: 5;
+}
+
+.nav-bar .logo-together img, .active-bar .logo-together img {  
+    position: relative; 
+    top: 1rem;
+    left: 2rem; 
+    height: 3rem;
+    width: auto;    
+}
+
+.nav-bar .logo-together img {
+    padding: 0 0 1rem;
+}
+
+.active-bar .logo-together img {  
+    padding: 0 0 1.5rem;
+}
+
+.nav-bar a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.active-bar a {
+    color: blue;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.active-bar a:hover, .nav-bar a:hover {
+    --spacing: 1em;
+    color: #aa1111;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    padding: calc(var(--spacing) / 2) var(--spacing);
+    position: relative;
+    transform: scaleX(1.2);
+    transition: all .3s ease-in-out;
+}
+
+.nav-bar nav, .active-bar nav {
+    display:flex;
+    justify-content: space-between;
+    width: 40%;
+    margin-right: 5%;
+}
+
+/* Drop-down menu */
+
+.dropdown {
+    display: none;  
+    padding-top: 2%;;  
+}
+
+.drop-line {
+    width: 3rem;
+    height: 0.3rem;
+    margin: 0.3rem 3rem;
+}
+
+.nav-bar .drop-line {
+    background-color: white;
+}
+
+.active-bar .drop-line {
+    background-color: blue;
+}
+
+.dropbtn {
+    margin-right: 3rem;
+}
+
+.dropbtn:hover {    
+    transform: scale(1.2);
+}
+
+.dropbtn:hover .drop-line {
+    background-color: #aa1111;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 7rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.slide-left {
+    position: relative;
+    margin-left: 20rem;
+    top: 8rem;
+    z-index: 2;
+}
+
+.slide-left h1 {
+  animation: slide-left 3s;
+  text-decoration: underline;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 300%;;
+  }
+
+  to {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.drop-down {
+    margin-top: -17rem;
+    margin-left: 22rem;
+    z-index: 1;
+}
+
+.drop-down h2 {
+    position: relative;
+    animation: drop;
+    animation-delay: 1.8s;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drop {
+    0% {top: -250px}
+    100% {top: 21rem}
+}
+
+#cards-home {
+      background-image: url("./images/british-flag.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display:flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      max-width: 100%;
+      padding: 2rem      
+}
+
+.card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 25rem;  
+    overflow: hidden;
+    margin: 2rem; 
+    border: 0.5rem solid black;
+    border-radius: 0.5rem;
+}
+
+#story {      
+    background-image: url("./images/piccadilly-circus-2.jpg");
+    width: 30%;
+}
+
+#work {
+    background-image: url("./images/buckingham-palace-guard.jpg");
+    width: 45%;
+}
+
+#skills {
+    background-image: url("./images/natural-history-museum.jpg");
+    width: 45%;
+}
+
+#contact {
+    background-image: url("./images/piccadilly-circus.jpg");
+    width:30%;
+}
+
+.card-content {
+    position: relative;
+    top:45%;
+    padding: 15%;
+    background: linear-gradient(hsl(0 0% 0% / 0),hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1)) ;
+}
+
+.card-content:hover {  
+    transition: transform 500ms ease;
+    transform: translateY(-40%);
+}
+
+.card-title {
+    position: relative;
+    width: max-content;
+    color:  white;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    background: white;
+    height: 0.25rem;
+    left: calc(0.5rem * -1);
+    bottom: -3px;
+    width: calc(100% + 1.5rem);
+    transform-origin: left;
+    transition: transform 2s ease;
+}
+
+.card-text {
+    padding: 1.5rem 0;
+    color: white;
+}
+
+.card-content button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 0.5em 1.25em;
+    border-radius: 0.25em;
+    transition: all 0.3s ease 0s;
+}
+
+.card-content button a {
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+.card-content button:hover,
+.card-content button:focus{
+    background-color: blue;
+    border: 0.1rem solid white;
+}
+
+.card-content button:hover a,
+.card-content button:focus a{
+    color: white;
+}
+
+
+footer {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    border-top: 0.3rem solid grey;
+    padding: 0.2rem auto;
+}
+
+footer p {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.2rem;
+    color: #aa1111;
+    letter-spacing: 0.3rem;
+    padding: 0.3rem;
+}
+
+footer span {
+    color: blue;
+}
+
+/*About Me*/
+
+#header-about-me {
+    background-image: url("./images/millenium-bridge.jpg");
+    align-items:center;
+    margin-bottom: 0;
+}
+
+.content-aboutMe {
+    position:relative;
+    top: 8rem;
+    left: 21rem;
+    animation: fadeIn linear 3s;
+}
+      
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+    
+.title-aboutMe{
+    line-height: 4.2rem;
+}
+
+.text-aboutMe {
+    text-decoration: overline #aa1111 0.4rem;
+    margin-top: 0;    
+    line-height: 0;
+}
+
+.aboutMe {
+    background-color: rgb(157, 101, 247);
+    padding: 1rem 12rem;
+    text-align: center;
+}
+
+.aboutMe h3 {
+    font-family: 'Courgette', cursive;
+}
+
+.aboutMe p {
+    font-family: 'Courgette', cursive;
+    font-size: 2rem;
+}
+
+/*Projects*/
+
+#header-projects {
+    background-image: url("./images/the-shard.jpg");
+    border-bottom: 0.3rem solid grey;
+}
+
+.content-projects {
+    position:relative;
+    top: 8rem;
+    left: 7rem;
+    animation: fadeIn linear 3s;
+}
+      
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.projects {
+    display: inline-flex;
+    flex-flow:row wrap;
+    align-items: flex-start;
+    justify-content:space-evenly;
+    justify-items: center;    
+    max-width: 100%;
+    margin-top: 1.5rem;
+    border-top: 0.3rem solid grey;  
+}
+
+
+.title-projects h1 {
+    text-decoration: underline;
+}
+
+.title-projects h1, .text-projects h2{
+    margin: 0;
+}
+
+.invitation {
+    position: sticky;
+    top: 5.5em;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: rgb(155, 181, 202);
+    width: 20%;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    align-content: space-between;
+}
+
+.invitation h3 {
+    color: black;
+}
+
+.invitation #span{
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.myWork {
+    display: inline-flex;
+    flex-flow: row wrap;
+    width: 60%;
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: space-around;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.project-container { 
+    display: flex;
+    flex-flow: row wrap;
+    width: 40%;
+    height: 20rem;
+    padding: 1rem;
+    margin: 1rem 1rem 2.5rem;
+    border: 0.3rem solid grey;
+    border-radius: 0.5rem;
+    text-align: center; 
+    justify-items: center;
+    justify-content: center; 
+    align-content: space-between; 
+}
+
+.project-container img {
+    max-width: 100%;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.project-container img:hover {
+    transform: scale(1.5);
+}
+
+.project-name {
+    width: 100%;
+    background-color: white;  
+    text-align: center;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.project-name h4 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #aa1111; 
+    line-height: 2rem;
+    font-size: 1.8rem;
+    margin:0;
+}
+
+.project-description {
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;    
+    background-color: rgb(155, 181, 202);
+    box-shadow: -10px 10px #111b36be;
+}
+
+.project-text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    text-align: center;
+    z-index: 1;
+}
+
+.project-text h4 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #aa1111;
+}
+
+.project-description img{
+    margin: 0.5rem;
+}
+
+.project-container:hover .project-description {
+    display: flex;
+}
+
+.project-container:hover .project-name, 
+.project-container:hover .project-container img {
+    display: none;
+}
+
+.project-container:hover .project-description {    
+    transform-origin: center;
+    transition-duration: 200ms;
+    transform:translateY(-80%);   
+}
+
+/* Skills */
+
+#header-skills {
+    height: 0;
+}
+
+.main-skills {
+    background-image: url("./images/tower-bridge.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: inline-flex;
+    flex-flow: row wrap;
+    align-content:space-around;
+    align-items: baseline;
+    justify-content:space-evenly;
+    max-width: 100%;
+    width: 100%;
+    text-shadow: 0.5px 1px 2px #000;
+}
+
+.banner-skills {
+    position:sticky;
+    width: 25%;
+    top:15rem;
+}
+
+.content-skills {    
+    display: flex;
+    flex-flow: column wrap;
+    background-color: rgba(250, 250, 250, 0.8);
+    width: 100%;
+    padding: 1rem;
+    align-content: space-between;
+}
+
+.title-skills {    
+    line-height: 1rem;
+}
+
+.in-progress {
+    text-decoration: overline #aa1111 0.4rem;
+    margin-top: 0;    
+    line-height: 0.5rem;
+}
+
+.my-skills {
+    display: flex;
+    flex-flow: column wrap;
+    width: 30%;
+    margin: 1rem;
+    padding: 5rem;
+    justify-content: space-around;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.block {
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+    color: black;
+    background-color: rgba(250, 250, 250, 0.8);
+    margin: 5rem auto;
+    padding: 5rem;    
+    border: 0.3rem solid grey;
+}
+
+.block .fab:hover {
+    transition: 2s;
+    transform: rotate(360deg);
+}
+
+/* Contact */
+
+#header-contact {
+    background-image: url("./images/telephone-box.jpg");
+}
+
+.contact {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3rem;
+}
+
+.title-contact {
+    text-align: center;    
+    line-height:1rem;
+    margin-top: 10rem;
+    margin-bottom: 0;
+}
+
+.description-contact {
+    text-align: center;
+    text-decoration: overline #aa1111 0.4rem;
+}
+
+.description-contact p {  
+    font-family: 'Courgette', cursive;
+    color:black;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.icons-contact {
+    height: 15rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;  
+    margin-top: 5rem; 
+    margin-bottom: 7rem;
+    flex: 1;
+}
+
+.icons-contact a {
+    margin: 0 2.5rem;
+    color:blue;
+}
+
+.icons-contact a:hover {
+    transform: scale(1.1);
+}
+
+.icons-contact a:visited {
+    color: #aa1111;
+}
+
+/* resoponsive design */
+
+@media only screen and (min-width:1200px) and (max-width:1400px) {
+    
+    header { 
+        height: 48rem;
+    }
+
+    .nav-bar nav, .active-bar nav {
+        width: 55%;
+    }
+
+    .banner h1, #banner-aboutMe h1, #banner-projects h1, .banner-skills h1, #scroll-contact .title-contact h1 {
+        font-size: 4.8rem;
+        word-spacing: 1.7rem;
+    }
+
+    .banner h2, #banner-aboutMe h2, #banner-projects h2, .banner-skills h2 {
+        font-size: 2.8rem;
+    }
+
+    .slide-left {
+        margin-left: 15rem;
+        top: 7rem;
+    }
+
+    .drop-down {
+        margin-left: 18rem;
+    }
+    
+    .card {
+        height: 23rem;  
+    }
+
+    .card-content:hover {  
+        transform: translateY(-45%);
+    }
+
+    .content-aboutMe {
+        top: 7rem;
+        left: 17rem;
+    }
+
+    .aboutMe h3 {
+        font-size: 2rem;
+    }
+
+    .aboutMe p {
+        font-size: 1.5rem;
+    }
+
+    .content-projects {
+        left: 3rem;
+    }
+
+    .title-aboutMe h1 {
+        font-size: 4rem;
+    }
+
+    .text-aboutMe h2 {
+        font-size: 2.5rem;
+    }
+
+    .project-container { 
+        width: 35%;
+        height: 18rem;
+    }
+
+    .project-name h4 {
+        line-height: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .project-text h4 {
+        font-size: 1.5rem;
+    }
+    
+    .project-description img{
+        height: 2.2rem;
+    }
+    
+    .title-skills h1 {
+        font-size: 4rem;
+    }
+
+    .in-progress h2 {
+        font-size: 2.3rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .block {
+        padding: 4rem;
+    }
+
+    .title-contact {
+        margin-top: 20rem;
+    }
+
+    
+    .title-contact h1 {
+        font-size:  4rem;
+    }
+
+    #scroll-contact .description-contact p {
+        font-size: 1.8rem;
+    }
+    
+    .icons-contact i {
+        font-size: 4rem;
+        margin-bottom: 4rem;
+    }
+}
+
+@media only screen and (min-width:1000px) and (max-width:1200px) {
+   
+    header { 
+        height: 46rem;
+    }    
+
+    .nav-bar .ball, .active-bar .ball {
+        border-radius: 1.5rem;
+        width: 1.4rem;
+        height: 1.4rem;
+        border: 0.25rem solid #aa1111;
+    }
+
+    .nav-bar .logo-together img, .active-bar .logo-together img {  
+        left: 1.2rem; 
+        height: 2.5rem;  
+    }
+    
+    .nav-bar .logo-together img {
+        padding: 0 0 1rem;
+    }
+    
+    .active-bar .logo-together img {  
+        padding: 0 0 1.7rem;
+    }
+
+    .nav-bar nav, .active-bar nav {
+        width: 60%;
+    }
+
+    .nav-bar nav a, .active-bar nav a {
+        font-size: 1.3rem;
+    }
+
+    .banner h1, #banner-aboutMe h1, #banner-projects h1, .banner-skills h1, #scroll-contact .title-contact h1 {
+        font-size: 4.6rem;
+        word-spacing: 1.6rem;
+    }
+
+    .banner h2, #banner-aboutMe h2, #banner-projects h2, .banner-skills h2 {
+        font-size: 2.6rem;
+    }
+
+    .slide-left {
+        margin-left: 10rem;
+        top: 6.5rem;
+    }
+    
+    .drop-down {
+        margin-left: 12rem;
+    }  
+    
+    @keyframes drop {
+        0% {top: -250px}
+        100% {top: 20rem}
+    }
+
+    .card {
+        height: 19rem;  
+    }
+
+    .content-aboutMe {
+        top: 6rem;
+    }
+
+    h3 {
+        font-size: 2.3rem;
+    }  
+
+    h4 {
+        font-size: 1.6rem;
+    }
+
+    .card-text {
+        padding: 0.6rem 0;
+    }
+    
+    .card-content button {        
+        margin-bottom: 3rem;
+    }
+
+    .title-aboutMe h1 {
+        font-size: 3.5rem;
+    }
+
+    .text-aboutMe h2 {
+        font-size: 2.2rem;
+    }
+
+    .content-aboutMe {
+        left: 15%;
+    }
+
+    .aboutMe h3 {
+        font-size: 1.8rem;
+    }
+
+    .aboutMe p {
+        font-size: 1.4rem;
+    }
+
+    .aboutMe {
+        padding: 0.7rem 7rem;
+    }       
+    
+    .content-projects {
+        background-color: rgba(250, 250, 250, 0.6);
+    }
+
+    .invitation h3 {    
+        font-size: 2rem;
+    }
+
+    .invitation {
+        text-align: center;
+    }
+    
+    .project-container { 
+        width: 35%;
+        height: 18rem;
+    }
+
+    .project-name h4 {
+        line-height: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .project-text h4 {
+        font-size: 1.5rem;
+    }
+    
+    .project-description img{
+        height: 2.2rem;        
+        margin-bottom: 1.5rem;
+    }    
+
+    .in-progress h2 {
+        font-size: 2rem;
+    }
+
+    .block {
+        padding: 3.5rem;
+    }
+    
+    .block i {
+        font-size: 4rem;
+    }
+    
+    .title-contact {
+        margin-top: 9rem;
+    }   
+    
+    #scroll-contact .description-contact p {
+        font-size: 1.5rem;
+    }
+    
+    .icons-contact i {
+        font-size: 3.5rem;
+        margin-bottom: 5rem;
+    }   
+}
+
+@media only screen and (min-width:800px) and (max-width:1000px) { 
+ 
+    header { 
+        height: 44rem;
+    }    
+
+    .nav-bar .ball, .active-bar .ball {
+        border-radius: 1.5rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        border: 0.2rem solid #aa1111;
+    }
+
+    .nav-bar .logo-together img, .active-bar .logo-together img {  
+        left: 1.2rem; 
+        height: 2.5rem;  
+    }
+    
+    .nav-bar .logo-together img {
+        padding: 0 0 0.8rem;
+    }
+    
+    .active-bar .logo-together img {  
+        padding: 0 0 1.5rem;
+    }
+
+    .nav-bar nav, .active-bar nav {
+        width: 60%;
+    }
+
+    .nav-bar nav a, .active-bar nav a {
+        font-size: 1.2rem;
+    }
+
+    .banner h1, #banner-aboutMe h1, #banner-projects h1, .banner-skills h1, #scroll-contact .title-contact h1 {
+        font-size: 4.4rem;
+        word-spacing: 1.4rem;
+    }
+
+    .banner h2, #banner-aboutMe h2, #banner-projects h2, .banner-skills h2 {
+        font-size: 2.4rem;
+    }
+
+    .slide-left {
+        margin-left: 4rem;
+        top: 6.5rem;
+    }
+    
+    .drop-down {
+        margin-left: 6rem;
+    }  
+    
+    @keyframes drop {
+        0% {top: -250px}
+        100% {top: 20rem}
+    }
+
+    #cards-home {
+        padding: 0.5rem;  
+    }
+
+    .card {
+        height: 16rem;  
+    }
+
+    h3 {
+        font-size: 2rem;
+    }  
+
+    h4 {
+        font-size: 1.4rem;
+    }
+
+    .card-text {
+        padding: 0.6rem 0;
+    }
+    
+    .card-content button {        
+        margin-bottom: 3rem;
+    }    
+
+    .content-aboutMe {
+        top: 6rem;
+        left: 2rem;
+    }
+
+    .aboutMe h3 {
+        font-size: 1.6rem;
+    }
+
+    .aboutMe p {
+        font-size: 1.2rem;
+    }
+
+    .aboutMe {
+        padding: 0.7rem 5rem;
+    }    
+    
+    .content-projects {
+        background-color: rgba(250, 250, 250, 0.6);
+    }
+
+    .content-projects {
+        left: 4%;
+    }
+
+    .projects {
+        margin-top: 1rem;
+    }
+
+    .invitation h3 {    
+        font-size:1.8rem;
+    }
+
+    .invitation {
+        text-align: center;
+    }
+    
+    .myWork {
+        width: 65%;
+        margin: 0.4rem;
+        padding: 0.4rem;
+    }
+
+    .project-container { 
+        width: 35%;
+        height: 13rem;
+    }
+
+    .project-name h4 {
+        line-height: 1.2rem;
+        font-size: 1.2rem;
+    }
+
+    .project-text h4 {
+        font-size: 1.1rem;
+        padding-top: 0.5rem;
+    }
+    
+    .project-text p {
+        font-size: 0.9rem;
+    }
+
+    .project-text {
+        padding: 0 0.3rem;
+    }
+    .project-description img{
+        height: 1.8rem;         
+        padding-bottom: 1.5rem;      
+    }
+
+    .title-skills h1 {
+        font-size: 2.8rem;
+    }
+
+    .in-progress h2 {
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .block {
+        padding: 3rem;
+    }
+
+    .block i {
+        font-size: 4rem;
+    }
+    
+    .title-contact {
+        margin-top: 7rem;
+    }
+    
+    .title-contact h1 {
+        font-size:  3.3rem;
+    }
+
+    #scroll-contact .description-contact p {
+        font-size: 1.2rem;
+    }
+    
+    .icons-contact i {
+        font-size: 3.5rem;
+        margin-bottom: 7rem;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:800px) {
+   
+    header { 
+        height: 42rem;
+    }    
+
+    .nav-bar .ball, .active-bar .ball {
+        border-radius: 1.5rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 0.2rem solid #aa1111;
+    }
+
+    .nav-bar .logo-together img, .active-bar .logo-together img {  
+        left: 1.2rem; 
+        height: 2.6rem;  
+    }
+    
+    .nav-bar .logo-together img {
+        padding: 0 0 0.8rem;
+    }
+    
+    .active-bar .logo-together img {  
+        padding: 0 0 1.5rem;
+    }
+
+    .nav-bar nav, .active-bar nav {
+        display: none;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+    .banner h1, #banner-aboutMe h1, #banner-projects h1, .banner-skills h1, #scroll-contact .title-contact h1 {
+        font-size: 3.4rem;
+        word-spacing: 1.1rem;
+    }
+
+    .banner .drop-down h2, #banner-projects h2, .banner-skills h2 {
+        font-size: 2.4rem;
+    }
+
+    .slide-left {
+        margin-left: 3rem;
+        top: 7rem;
+    }
+    
+    .drop-down {
+        margin-left: 6rem;
+    }  
+    
+    @keyframes drop {
+        0% {top: -250px}
+        100% {top: 21rem}
+    }
+
+    #banner-aboutMe h2 {
+        font-size: 1.5rem;
+    }
+
+    #cards-home {
+        padding: 0.5rem; 
+        flex-flow: column wrap; 
+    }
+
+    .card {
+        margin: 0.5rem auto;
+    }
+
+    #story, #work, #skills, #contact {
+        width: 85%;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }  
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    .card-text {
+        padding: 0.6rem 0;
+    }
+    
+    .card-content button {        
+        margin-bottom: 3rem;
+    }
+
+    .card-content {
+        top:55%;
+    }
+
+    .title-aboutMe h1 {
+        font-size: 3rem;
+    }
+
+    .text-aboutMe h2 {
+        font-size: 1.5rem;
+    }
+
+    .content-aboutMe {
+        left: 10%;
+    }
+
+    .aboutMe h3 {
+        font-size: 1.6rem;
+    }
+
+    .aboutMe p {
+        font-size: 1.2rem;
+    }
+
+    .aboutMe {
+        padding: 0.7rem 3rem;
+    }
+
+    .content-projects h1 {
+        font-size: 3rem;
+    }
+
+    .content-projects h2 {
+        font-size: 2rem;
+    }
+
+    .content-projects {         
+        background-color: rgba(250, 250, 250, 0.8);       
+        left: 15%;
+    }
+
+    .projects {
+        margin-top: 1rem;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .invitation h3 {    
+        font-size:1.8rem;
+    }
+
+    .invitation p {
+        font-size: 1.4rem;
+    }
+
+    .invitation #span {
+        display: none;
+    }
+
+    .invitation {
+        position: static;
+        display: flex;
+        flex-flow: column wrap;
+        background-color: rgb(155, 181, 202);
+        width: 100%;
+        padding: 0.5rem auto;
+        margin: 0.5rem auto;
+        align-content: space-between;
+    }
+
+    .myWork {
+        width: 100%;
+        margin: 0;
+        padding: 0.5rem;
+        flex-flow: column wrap;
+    }
+
+    .project-container { 
+        width: 80%;
+        height: 25rem;
+        align-content: space-between;
+    }
+
+    .project-name {
+        padding-top: 0%;
+    }
+   
+    .project-name h4 {
+        line-height: 1.4rem;
+        font-size: 1.8rem;
+    }
+
+    .project-text h4 {
+        font-size: 2.2rem;
+        padding-top: 0.5rem;
+    }
+    
+    .project-text p {
+        font-size: 1.4rem;
+    }
+
+    .project-text {
+        padding: 0 0.3rem;
+    }
+
+    .project-description img{
+        height: 2.6rem;        
+        margin-bottom: 1.5rem;
+    }
+    
+    .main-skills {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .banner-skills {
+        position: static;
+        width: 100%;
+        margin-top: 10rem;
+    }
+
+    .title-skills h1 {
+        font-size: 3.5rem;
+    }
+
+    .in-progress h2 {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .content-skills {    
+        align-content: center;
+        padding: 0;
+    }
+    
+    .title-skills {    
+        line-height: 1rem;
+    }
+
+    .my-skills {
+        width: 100%;
+        margin: 3rem 0 0;
+        padding: 0;
+    }
+
+    .block {
+        margin: 3rem auto;   
+        border: none;
+        padding: 3rem;
+        width: 100%;
+    }
+
+    .block i {
+        font-size: 5rem;
+    }
+    
+    .title-contact {
+        margin-top: 10rem;
+        border-bottom: 0.4rem solid #aa1111 ;
+    }
+    
+    .title-contact h1 {
+        font-size:  3.3rem;
+    }
+
+    .description-contact {
+        text-decoration: none;
+        margin: 0 4rem;
+    }
+
+    .description-contact p {
+        font-size: 1.4rem;
+    }
+    
+    .icons-contact i {
+        font-size: 3.5rem;
+        margin-bottom: 6rem;
+    }
+}
+
+@media only screen and (max-width:600px) {
+
+    h1 {
+        color: purple;
+    }
+    header { 
+        height: 40rem;
+    }    
+
+    .nav-bar .ball, .active-bar .ball {
+        border-radius: 1.5rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 0.2rem solid #aa1111;
+    }
+
+    .nav-bar .logo-together img, .active-bar .logo-together img {  
+        left: 1.2rem; 
+        height: 2.6rem;  
+    }
+    
+    .nav-bar .logo-together img {
+        padding: 0 0 0.8rem;
+    }
+    
+    .active-bar .logo-together img {  
+        padding: 0 0 1.5rem;
+    }
+
+    .nav-bar nav, .active-bar nav {
+        display: none;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+    .banner h1, #banner-aboutMe h1, #banner-projects h1, .banner-skills h1, #scroll-contact .title-contact h1 {
+        font-size: 2.6rem;
+        word-spacing: 1.1rem;
+    }
+
+    .banner .drop-down h2, #banner-projects h2, .banner-skills h2 {
+        font-size: 2rem;
+    }
+
+    .slide-left {
+        margin-left: 1rem;
+        top: 8rem;
+    }
+    
+    .drop-down {
+        margin-left: 2.5rem;
+    }  
+    
+    @keyframes drop {
+        0% {top: -250px}
+        100% {top: 23rem}
+    }
+
+    #cards-home {
+        padding: 0.5rem; 
+        flex-flow: column wrap; 
+    }
+
+    .card {
+        margin: 0.5rem auto;
+    }
+
+    #story, #work, #skills, #contact {
+        width: 85%;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }  
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    .card-text {
+        padding: 0.6rem 0;
+    }
+    
+    .card-content button {        
+        margin-bottom: 3rem;
+    }
+
+    .card-content {
+        top:55%;
+    }
+
+    .title-aboutMe h1 {
+        font-size: 2.6rem;
+    }
+
+    .text-aboutMe h2 {
+        font-size: 1.2rem;
+    }
+
+    .content-aboutMe {
+        left: 6%;
+    }
+
+    .aboutMe h3 {
+        font-size: 1.6rem;
+    }
+
+    .aboutMe p {
+        font-size: 1.2rem;
+    }
+
+    .aboutMe {
+        padding: 0.7rem 3rem;
+    }
+
+    .content-projects h1 {
+        font-size: 2.5rem;
+    }
+
+    .content-projects h2 {
+        font-size: 1.8rem;
+    }
+
+    .content-projects {         
+        background-color: rgba(250, 250, 250, 0.8);       
+        left: 5%;
+    }
+
+    .projects {
+        margin-top: 1rem;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .invitation h3 {    
+        font-size:1.8rem;
+    }
+
+    .invitation p {
+        font-size: 1.2rem;
+    }
+
+    .invitation #span {
+        display: none;
+    }
+
+    .invitation {
+        position: static;
+        display: flex;
+        flex-flow: column wrap;
+        background-color: rgb(155, 181, 202);
+        width: 100%;
+        padding: 0.5rem auto;
+        margin: 0.5rem auto;
+        align-content: space-between;
+    }
+
+    .myWork {
+        width: 100%;
+        margin: 0;
+        padding: 0.5rem;
+        flex-flow: column wrap;
+    }
+
+    .project-container { 
+        width: 80%;
+        height: 25rem;
+        align-content: space-between;
+    }
+
+    .project-name {
+        padding-top: 0%;
+    }
+   
+    .project-name h4 {
+        line-height: 1.4rem;
+        font-size: 1.8rem;
+    }
+
+    .project-text h4 {
+        font-size: 1.8rem;
+        padding-top: 0.5rem;
+    }
+    
+    .project-text p {
+        font-size: 1rem;
+    }
+
+    .project-text {
+        padding: 0 0.3rem;
+    }
+    .project-description img{
+        height: 2rem;        
+        margin-bottom: 1.5rem;
+    }
+    
+    .main-skills {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .banner-skills {
+        position: static;
+        width: 100%;
+        margin-top: 10rem;
+    }
+
+    .title-skills h1 {
+        font-size: 3rem;
+    }
+
+    .in-progress h2 {
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .content-skills {    
+        align-content: center;
+        padding: 0;
+    }
+    
+    .title-skills {    
+        line-height: 1rem;
+    }
+    .my-skills {
+        width: 100%;
+        margin: 3rem 0 0;
+        padding: 0;
+    }
+
+    .block {
+        margin: 3rem auto;   
+        border: none;
+        padding: 3rem;
+        width: 100%;
+    }
+
+    .block i {
+        font-size: 4rem;
+    }
+    
+    .title-contact {
+        margin-top: 5rem;
+        border-bottom: 0.4rem solid #aa1111 ;
+    }
+    
+    #scroll-contact .title-contact h1 {
+        font-size: 2.5rem;
+    }
+
+    .description-contact {
+        text-decoration: none;
+        margin: 0 3rem;
+    }
+
+    .description-contact p {
+        font-size: 1.35rem;
+    }
+    
+    .icons-contact i {
+        font-size: 3.5rem;
+        margin-bottom: 5rem;
+    }
+}
+

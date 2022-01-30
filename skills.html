@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+    <head>
+      <title>Personal Portfolio Website</title>
+      <link href="style.css" type="text/css" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+      <script src="https://kit.fontawesome.com/50f7b83fae.js" crossorigin="anonymous"></script> 
+    </head>
+
+    <body>
+
+        <header id="header-skills">
+
+            <div class="nav-bar">
+                <div class="logo-together">
+                     <div id="foo" class="ball"></div>               
+                     <img src="./images/dodesign-logo.png" alt="logo" />
+                </div>
+                <div class="dropdown">
+                    <div class="dropbtn">
+                        <div class="drop-icon">
+                            <div class="drop-line"></div>                          
+                            <div class="drop-line"></div>
+                            <div class="drop-line"></div>
+                        </div>                        
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                      <a href="index.html">Home</a>
+                        <a href="aboutMe.html">About Me</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="skills.html">Skills</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <nav>
+                     <a href="index.html">Home</a>
+                     <a href="aboutMe.html">About Me</a>
+                     <a href="projects.html">Projects</a>
+                     <a href="skills.html">Skills</a>
+                     <a href="contact.html">Contact</a>
+                </nav> 
+            </div>        
+        </header>
+        
+
+        <main class="main-skills">
+
+            <section class="banner-skills">
+                <div class="content-skills">
+                    <div class="title-skills">
+                        <h1>Skills</h1>        
+                    </div>
+                    <div class="in-progress">
+                        <h2>In progress</h2> 
+                    </div>
+                </div>
+            </section> 
+
+            <section class="my-skills">                        
+                 <div class="block">
+                      <i class="fab fa-html5 fa-5x"></i>
+                      <i class="fab fa-css3-alt fa-5x"></i>
+                 </div>           
+
+                  <div class="block">
+                      <i class="fab fa-git-square fa-5x"></i>
+                      <i class="fab fa-github fa-5x"></i>
+                 </div>
+
+                 <div class="block">
+                     <i class="fab fa-js-square fa-5x"></i>
+                     <i class="fab fa-python fa-5x"></i>
+                     <i class="fab fa-node fa-5x"></i>
+                 </div>              
+
+            </section>
+
+        </main>
+        
+        <footer>
+            <p>Oksana Dargue &COPY;<span>2022</span></p>
+        </footer>
+
+        <script>
+            var f = document.getElementById('foo');
+            document.addEventListener('click', function(ev){
+            f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
+            f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
+            },false);
+        </script>
+
+        <script>
+            const header = document.querySelector('.nav-bar');
+            window.onscroll = function() {
+            var top = window.scrollY;
+            console.log(top);
+               if (top >= 150) {
+                  header.classList.add('active-bar')
+               } else {
+                  header.classList.remove('active-bar');
+               }
+            }
+        </script>
+
+
+    </body>
+</html>
