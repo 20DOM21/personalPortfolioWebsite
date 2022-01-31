@@ -1463,10 +1463,7 @@ footer span {
 }
 
 @media only screen and (max-width:600px) {
-
-    h1 {
-        color: purple;
-    }
+ 
     header { 
         height: 40rem;
     }    
