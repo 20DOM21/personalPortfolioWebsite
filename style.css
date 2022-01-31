@@ -65,7 +65,7 @@ header .nav-bar, header .active-bar {
     width: 100%;
     margin:0;    
     padding: 0.5rem 0.5rem;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     display: flex;
     align-items: center;
     align-content: center;
@@ -708,7 +708,7 @@ footer span {
 .icons-contact {
     height: 15rem;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
     justify-items: center;
     align-items: center;  
@@ -1462,7 +1462,7 @@ footer span {
     }
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (min-width:400px) and (max-width:600px) {
  
     header { 
         height: 40rem;
@@ -1715,6 +1715,279 @@ footer span {
     .description-contact {
         text-decoration: none;
         margin: 0 3rem;
+    }
+
+    .description-contact p {
+        font-size: 1.35rem;
+    }
+    
+    .icons-contact i {
+        font-size: 3.5rem;
+        margin-bottom: 5rem;
+    }
+}
+
+@media only screen and (max-width:400px) {
+
+    header { 
+        height: 40rem;
+    }    
+
+    .nav-bar, .active-bar {
+        height: 3rem;
+        padding-top: 1rem;
+    }
+
+    .nav-bar .ball, .active-bar .ball {
+        border-radius: 1.5rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 0.2rem solid #aa1111;
+    }
+
+    .nav-bar .logo-together img, .active-bar .logo-together img {  
+        left: 1.2rem; 
+        height: 2.6rem;  
+    }
+    
+    .nav-bar .logo-together img {
+        padding: 0 0 0.8rem;
+    }
+    
+    .active-bar .logo-together img {  
+        padding: 0 0 1.5rem;
+    }
+
+    .nav-bar nav, .active-bar nav {
+        display: none;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+    .banner h1, #banner-aboutMe h1, #banner-projects h1, .banner-skills h1, #scroll-contact .title-contact h1 {
+        font-size: 2.2rem;
+        letter-spacing: 0.1rem;
+        word-spacing: 0.3rem;
+    }
+
+    .banner .drop-down h2, #banner-projects h2, .banner-skills h2 {
+        font-size: 2rem;
+    }
+
+    .slide-left {
+        margin-left: 2rem;
+        top: 8rem;
+    }
+    
+    .drop-down {
+        margin-left: 2.5rem;
+    }  
+    
+    @keyframes drop {
+        0% {top: -250px}
+        100% {top: 23rem}
+    }
+
+    #cards-home {
+        padding: 0.5rem; 
+        flex-flow: column wrap; 
+    }
+
+    .card {
+        margin: 0.5rem auto;
+    }
+
+    #story, #work, #skills, #contact {
+        width: 85%;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }  
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    .card-text {
+        padding: 0.6rem 0;
+    }
+    
+    .card-content button {        
+        margin-bottom: 3rem;
+    }
+
+    .card-content {
+        top:55%;
+    }
+
+    .title-aboutMe h1 {
+        font-size: 2.6rem;
+    }
+
+    .text-aboutMe h2 {
+        font-size: 1.15rem;
+        letter-spacing: 0.05rem;
+        word-spacing: 0.1rem;
+    }
+
+    .content-aboutMe {
+        left: 6%;
+    }
+
+    .aboutMe h3 {
+        font-size: 1.6rem;
+    }
+
+    .aboutMe p {
+        font-size: 1.2rem;
+    }
+
+    .aboutMe {
+        padding: 0.7rem 3rem;
+    }
+
+    .content-projects h1 {
+        font-size: 2.5rem;
+    }
+
+    .content-projects h2 {
+        font-size: 1.8rem;
+    }
+
+    .content-projects {         
+        background-color: rgba(250, 250, 250, 0.8);       
+        left: 5%;
+    }
+
+    .projects {
+        margin-top: 1rem;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .invitation h3 {    
+        font-size:1.8rem;
+    }
+
+    .invitation p {
+        font-size: 1.2rem;
+    }
+
+    .invitation #span {
+        display: none;
+    }
+
+    .invitation {
+        position: static;
+        display: flex;
+        flex-flow: column wrap;
+        background-color: rgb(155, 181, 202);
+        width: 100%;
+        padding: 0.5rem auto;
+        margin: 0.5rem auto;
+        align-content: space-between;
+    }
+
+    .myWork {
+        width: 100%;
+        margin: 0;
+        padding: 0.5rem;
+        flex-flow: column wrap;
+    }
+
+    .project-container { 
+        width: 80%;
+        height: 25rem;
+        align-content: space-between;
+    }
+
+    .project-name {
+        padding-top: 0%;
+    }
+   
+    .project-name h4 {
+        line-height: 1.4rem;
+        font-size: 1.8rem;
+    }
+
+    .project-text h4 {
+        font-size: 1.8rem;
+        padding-top: 0.5rem;
+    }
+    
+    .project-text p {
+        font-size: 1rem;
+    }
+
+    .project-text {
+        padding: 0 0.3rem;
+    }
+    .project-description img{
+        height: 2rem;        
+        margin-bottom: 1.5rem;
+    }
+    
+    .main-skills {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .banner-skills {
+        position: static;
+        width: 100%;
+        margin-top: 25%;
+    }
+
+    .title-skills h1 {
+        font-size: 3rem;
+    }
+
+    .in-progress h2 {
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .content-skills {    
+        align-content: center;
+        padding: 0;
+    }
+    
+    .title-skills {    
+        line-height: 1rem;
+    }
+    .my-skills {
+        width: 100%;
+        margin: 3rem 0 0;
+        padding: 0;
+    }
+
+    .block {
+        margin: 3rem auto;   
+        border: none;
+        padding: 3rem;
+        width: 100%;
+    }
+
+    .block i {
+        font-size: 4rem;
+    }
+    
+    .title-contact {
+        margin-top: 5rem;
+        border-bottom: 0.4rem solid #aa1111 ;
+    }
+    
+    #scroll-contact .title-contact h1 {
+        font-size: 2.4rem;
+    }
+
+    .description-contact {
+        text-decoration: none;
+        margin: 0 0.5rem;
     }
 
     .description-contact p {
